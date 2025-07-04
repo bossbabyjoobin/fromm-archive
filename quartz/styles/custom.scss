@@ -1,3 +1,50 @@
 @use "./base.scss";
 
+
 // put your custom CSS here!
+
+.content-meta {
+  display: none; 
+}
+
+video {
+  width: 800px;
+  height: 450px;
+  max-width: 100%;
+}
+
+audio {
+  width: 25%;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: #222;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #444;
+    transition: 0.3s;
+}
+
+.custom-button img {
+    height: 16px;
+    width: 16px;
+}
+
+.custom-button:hover {
+    background-color: #333;
+    border-color: #666;
+}

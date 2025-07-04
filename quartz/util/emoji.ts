@@ -31,13 +31,25 @@ type EmojiMap = {
 }
 
 let emojimap: EmojiMap | undefined = undefined
+
 export async function loadEmoji(code: string) {
   if (!emojimap) {
     const data = await import("./emojimap.json")
     emojimap = data
   }
 
-  const name = emojimap.codePointToName[`${code.toUpperCase()}`]
+  const upperCode = code.toUpperCase()
+  let name = emojimap.codePointToName[upperCode]
+
+  // 🔁 Fallback: try components of multi-codepoint emoji
+  if (!name && upperCode.includes("-")) {
+    const parts = upperCode.split("-")
+    const baseNames = parts.map(p => emojimap!.codePointToName[p]).filter(Boolean)
+    if (baseNames.length > 0) {
+      name = baseNames[0] // use first known component as fallback
+    }
+  }
+
   if (!name) throw new Error(`codepoint ${code} not found in map`)
 
   const b64 = emojimap.nameToBase64[name]
