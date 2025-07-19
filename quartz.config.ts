@@ -56,7 +56,7 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
-	  Plugin.HardLineBreaks(),
+      Plugin.HardLineBreaks(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
       }),
@@ -89,8 +89,20 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
+
+      // ✅ Custom script injection for Rybbit
+      Plugin.Emitter({
+        additionalHead: [
+          () => (
+            <script
+              src="https://app.rybbit.io/api/script.js"
+              data-site-id="1729"
+              defer
+            ></script>
+          ),
+        ],
+      }),
     ],
   },
 }
