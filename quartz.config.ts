@@ -91,16 +91,16 @@ const config: QuartzConfig = {
       Plugin.NotFoundPage(),
       Plugin.CustomOgImages(),
 
-      // ✅ Custom script injection for Rybbit
+      // ✅ Rybbit tracking script injected into <head>
       Plugin.Emitter({
         additionalHead: [
-          () => (
+          () => `
             <script
               src="https://app.rybbit.io/api/script.js"
               data-site-id="1729"
               defer
             ></script>
-          ),
+          `,
         ],
       }),
     ],
