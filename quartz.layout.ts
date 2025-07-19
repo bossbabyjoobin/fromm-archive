@@ -3,7 +3,16 @@ import * as Component from "./quartz/components"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
-  head: Component.Head(),
+  head: ({ cfg, pageData }) => (
+    <>
+      {Component.Head()({ cfg, pageData })}
+      <script
+        src="https://app.rybbit.io/api/script.js"
+        data-site-id="1729"
+        defer
+      ></script>
+    </>
+  ),
   header: [],
   afterBody: [],
   footer: Component.Footer({
