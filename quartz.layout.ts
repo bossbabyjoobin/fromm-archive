@@ -3,18 +3,18 @@ import * as Component from "./quartz/components"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
-  head: ({ cfg, pageData }) => (
-    <>
-      {Component.Head()({ cfg, pageData })}
+  head: Component.Head(),
+  header: [],
+  afterBody: [
+    // Raw HTML injection for Rybbit script before </body>
+    Component.RawHtml(`
       <script
         src="https://app.rybbit.io/api/script.js"
         data-site-id="1729"
         defer
       ></script>
-    </>
-  ),
-  header: [],
-  afterBody: [],
+    `),
+  ],
   footer: Component.Footer({
     links: {
       "tripleS X": "https://x.com/triplescosmos",
