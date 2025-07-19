@@ -5,16 +5,7 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [
-    // Raw HTML injection for Rybbit script before </body>
-    Component.RawHtml(`
-      <script
-        src="https://app.rybbit.io/api/script.js"
-        data-site-id="1729"
-        defer
-      ></script>
-    `),
-  ],
+  afterBody: [],
   footer: Component.Footer({
     links: {
       "tripleS X": "https://x.com/triplescosmos",
