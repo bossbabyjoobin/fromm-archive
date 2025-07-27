@@ -46,8 +46,14 @@ https://x.com/bossbabyjoobin/status/1838194413924925839
 
 I can only think of this to explain 심란단 (Simrandan) and it's origin. 
 심란단 (Simrandan) = It basically refers to fans who get anxious over her getting into trouble
-I’m not 100% confident in this interpretation, you can always just mention the fandom name without an explanation but people will probably get curious. I even remember asking Binnie about it once but she couldn’t explain it either… ㅋㅋㅋ
 
+#### 250717 Update
+
+The origin of the fandom name 심란단 (Simrandan) was confirmed here by JooBin. 
+Binnie said that whenever she cooks something, both her fans gets anxious and evens she herself get anxious about it. 
+But now that she's proven her cooking skills(?), during her [Cosmo live,](https://x.com/bossbabyjoobin/status/1944708931340927105) she says she'll use both now... Jjumeokkongdan and Simrandan.
+
+**Note:** It’s not like she uses it all the time to refer to her fans anyway.
 ### SeoAh
 
 #### 햇살단 (Haetsaldan) | 240417 – Present
